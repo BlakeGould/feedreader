@@ -88,31 +88,12 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-        // Thanks to @JohnMav and @zachary_23104455 in the Udacity forums
-        // beforeEach(function(done) {
-        //    setTimeout(function() {
-        //        loadFeed(0, done);
-        //    }, 5000);
-        // }, 5000);
-        // Just kidding...
-
-
-        beforeEach(function(done){
-            loadFeed(0, done);
-        });
-
-
+        // Thanks to @JohnMav and @zachary_23104455 in the Udacity forums for help with this test suite
+         beforeEach(function(done){
+             loadFeed(0, done);
+         });
 
          it ('has at least 1 .entry element within the .feed container', function (done) {
-            // expect($('.feed > .entry').length).not.toBe(0);
-            // expect($('.feed').children().length).not.toBe(0);
-
-            // var entriesCount = $(".feed .entry").length;
-            // expect(entriesCount).toBeGreaterThan(0);
-            // expect(entriesCount).not.toBe(0);
-
-            // expect('.feed').children().length).toBeGreaterThan(0);
-
             expect($('.feed').children().length).toBeGreaterThan(0);
             done();
          });
