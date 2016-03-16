@@ -70,9 +70,9 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
         it ('changes visibly on click', function () {
-            $('.menu-icon-link').click()
+            $('.menu-icon-link').click();
             expect(document.body.className).not.toBe("menu-hidden");
-            $('.menu-icon-link').click()
+            $('.menu-icon-link').click();
             expect(document.body.className).toBe("menu-hidden");
         });
 
@@ -111,12 +111,11 @@ $(function() {
 
         beforeEach(function(done){
             loadFeed(0, function() {
-                firstFeed = $('.feed').children();
-            });
-
-            loadFeed(1, function() {
-                secondFeed = $('.feed').children();
-                done();
+                firstFeed = $('.feed').html();
+                loadFeed(1, function() {
+                    secondFeed = $('.feed').html();
+                    done();
+                });
             });
         });
 
