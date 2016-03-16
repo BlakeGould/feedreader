@@ -15,7 +15,6 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
         /* A test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
@@ -37,7 +36,6 @@ $(function() {
                 expect(allFeeds[each].name.length).not.toBe(0);
             }
         });
-
     });
 
     describe("The menu", function() {
@@ -58,7 +56,6 @@ $(function() {
             $('.menu-icon-link').click();
             expect(document.body.className).toBe("menu-hidden");
         });
-
     });
 
     describe('Initial Entries', function() {
@@ -75,7 +72,6 @@ $(function() {
             expect($('.feed').children().length).toBeGreaterThan(0);
             done();
          });
-
     });
 
     describe('New Feed Selection', function() {
@@ -99,6 +95,5 @@ $(function() {
             expect(firstFeed).not.toBe(secondFeed);
             done();
         });
-
     });
 }());
